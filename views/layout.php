@@ -1,4 +1,4 @@
-<?php global$content; ?>
+<?php global $content; ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -13,6 +13,6 @@
     <?php echo $content; ?>
 </main>
 
-<?php include 'partials/_footer.php'; ?>
+<?php include_once 'partials/_footer.php'; ?>
 </body>
 </html>

@@ -1,11 +1,7 @@
 <?php
 
-$template = './views/pages/home.php';
+ob_start();
+include './views/pages/home.php';
+$content = ob_get_clean();
 
-require_once './models/blogManager.php';
-
-$monBlog = new Blog();
-
-//$blogs = $monBlog->getBlogs();
-
-require_once $template;
+include './views/layout.php';

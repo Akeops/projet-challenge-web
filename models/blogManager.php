@@ -1,5 +1,5 @@
 <?php
-require './models/connection.php';
+require './config/database.php';
 
 class Blog {
 

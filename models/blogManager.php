@@ -3,7 +3,7 @@ require './config/database.php';
 
 class Blog {
 
-function getBlogs(): array {
+/*function getBlogs(): array {
     $sql = "SELECT * FROM blog";
     $query = dbConnect()->prepare($sql);
     $query->fetchAll(PDO::FETCH_ASSOC);
@@ -22,5 +22,5 @@ function getBlogByID(int $id): array {
     $blogs = $query->fetch();
     $query->closeCursor();
     return $blogs;
-  }
+  }*/
 }

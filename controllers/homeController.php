@@ -6,6 +6,6 @@ require_once './models/blogManager.php';
 
 $monBlog = new Blog();
 
-$blogs = $monBlog->getBlogs();
+//$blogs = $monBlog->getBlogs();
 
 require_once $template;

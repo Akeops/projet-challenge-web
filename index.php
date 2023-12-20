@@ -1,2 +1,2 @@
 <?php
-require('config/router.php');
+require 'config/router.php';

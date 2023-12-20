@@ -1,6 +1,6 @@
 <?php
-require_once './models/usersManager.php';
-require_once './config/database.php';
+require_once '../models/usersManager.php';
+require_once '../config/database.php';
 
 $userManager = new UsersManager();
 
@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $registrationSuccess = $userManager->registerUser($username, $password, $email);
 
     if ($registrationSuccess) {
-        header('Location: login.php');
+        header('Location: loginController.php');
         exit();
     } else {
         echo "Erreur d'inscription";

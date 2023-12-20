@@ -1,6 +1,6 @@
 <?php
 
-require_once './config/routes.php';
+require './config/routes.php';
 
 $availableRouteNames = array_keys(AVAILABLE_ROUTES);
 

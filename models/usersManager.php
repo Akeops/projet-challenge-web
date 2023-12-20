@@ -1,11 +1,12 @@
 <?php
-require_once './config/database.php';
+require_once '../config/database.php';
 
 class UsersManager {
     private $db;
 
     public function __construct() {
-        $this->db = dbConnect();
+        $database = new Database();
+        $this->db = $database->dbConnect();
     }
 
     public function registerUser($username, $password, $email) {

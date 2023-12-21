@@ -5,8 +5,8 @@ class UsersManager {
     private $db;
 
     public function __construct() {
-        $database = new Database();
-        $this->db = $database->dbConnect();
+        //$database = new Database();
+        //$this->db = $database->dbConnect();
     }
 
     public function registerUser($username, $password, $email) {

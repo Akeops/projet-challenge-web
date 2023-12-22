@@ -4,7 +4,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>MVC</title>
+    <title>Projet Tiny House</title>
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/home.css">
 </head>
 <body>
 <?php include 'partials/_header.php'; ?>

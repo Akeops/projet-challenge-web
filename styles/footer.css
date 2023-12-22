@@ -1,0 +1,27 @@
+footer {
+    background-color: #FFFFFF;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    color: #1A4749;
+    text-align: center;
+    padding: 10px 5%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Gotham', sans-serif;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #1A4749;
+}
+
+footer a {
+    color: #54C3BA;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #1A4749;
+}

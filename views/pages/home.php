@@ -1,7 +1,45 @@
 <div class="home">
 
 	<section id="about">
-		<h1>Blog dev</h1>
-		<p>Voici la liste des articles</p>
+		<h1>Bienvenue sur la présentation du projet Tiny house ! </h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 	</section>
 </div>

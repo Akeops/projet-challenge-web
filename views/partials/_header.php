@@ -1,13 +1,21 @@
 <header>
-	<nav>
-	<?php
-		if(isset($_SESSION['id'])){ ?>
-			<a href="../../index.php?page=home">Accueil</a>
-		<?php } else { ?>
-			<a href="../../index.php?page=home">Accueil</a>
-			<a href="../../index.php?page=login">Connexion</a>
-        	<a href="../../index.php?page=register">Inscription</a>
-		<?php } ?>
-		
-	</nav>
+    <nav>
+        <div class="logo-container">
+            <a href="index.php?page=home" class="logo-link">
+                <img src="../../img/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.php?page=directory">Annuaire</a>
+            <a href="index.php?page=forum">Forum</a>
+        </div>
+
+        <?php
+        if(!isset($_SESSION['id'])){ ?>
+        <div class="auth-links">
+            <a href="index.php?page=login">Connexion</a>
+            <a href="index.php?page=register">INSCRIPTION</a>
+        </div>
+        <?php } ?>
+    </nav>
 </header>

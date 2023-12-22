@@ -9,9 +9,13 @@
             <a href="index.php?page=directory">Annuaire</a>
             <a href="index.php?page=forum">Forum</a>
         </div>
+
+        <?php
+        if(!isset($_SESSION['id'])){ ?>
         <div class="auth-links">
             <a href="index.php?page=login">Connexion</a>
             <a href="index.php?page=register">INSCRIPTION</a>
         </div>
+        <?php } ?>
     </nav>
 </header>

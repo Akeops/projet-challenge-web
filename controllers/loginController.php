@@ -35,6 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Afficher le formulaire de connexion
-include('./views/pages/connexion.php');
+include('./views/pages/login.php');
 
 ?>

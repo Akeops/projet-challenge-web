@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $registrationSuccess = $userManager->registerUser($username, $password, $email);
 
     if ($registrationSuccess) {
-        header('Location: loginController.php');
+        header('Location: ../../index.php?page=login');
         exit();
     } else {
         echo "Erreur d'inscription";

@@ -1,4 +1,4 @@
-<form action="../../controllers/registerController.php" method="post">
+<form action="../../index.php?page=register" method="post">
     <label for="username">Nom d'utilisateur:</label>
     <input type="text" id="username" name="username" required>
 

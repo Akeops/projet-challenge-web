@@ -30,8 +30,8 @@ class UsersManager {
         return $stmt->fetch(PDO::FETCH_ASSOC) != false;
     }
 
-    private function getUserByEmail($email) {
-        $stmt = $this->db->prepare('SELECT id, email, password FROM users WHERE email = :email');
+    function getUserByEmail($email) {
+        $stmt = $this->db->prepare('SELECT id, username, email, password FROM users WHERE email = :email');
         $stmt->bindParam(':email', $email);
         $stmt->execute();
         $userData = $stmt->fetch(PDO::FETCH_ASSOC);

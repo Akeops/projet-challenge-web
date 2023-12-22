@@ -4,23 +4,29 @@
 require_once './config/database.php';
 require_once './models/usersManager.php';
 
+$userManager = new UsersManager();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $userId = isset($_POST['id']) ? $_POST['id'] : '';
+
     $email = isset($_POST['email']) ? $_POST['email'] : '';
     $password = isset($_POST['password']) ? $_POST['password'] : '';
-    $userExists = $this->getUserByEmail($email);
+    $user = $userManager->getUserByEmail($email);
 
-    if (password_verify($password, $userExists['hashed_password']) && $userExists['email'] == $email) { 
-        $session_start();
-        $SESSION['id'] = $userId; 
-    } 
-} else {
-       echo "L'utilisateur n'existe pas. Vous pouvez procéder à l'inscription.";
-}
+    if ($user && password_verify($password, $user['password'])) { 
+        $_SESSION['id'] = $user['id']; 
+        $_SESSION['username'] = $user['username'];
+        header('Location: index.php?page=home');
+        exit();
+    } else {
+        echo "L'utilisateur n'existe pas. Vous pouvez procéder à l'inscription.";
+    }
+} 
 
     $db = null;
 
-// Afficher le formulaire de connexion
+ob_start();
 include('./views/pages/login.php');
+$content = ob_get_clean();
+
+include './views/layout.php';
 ?>

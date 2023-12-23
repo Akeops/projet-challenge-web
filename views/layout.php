@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="./styles/home.css">
 </head>
 <body>
-<?php include 'partials/_header.php'; ?>
+<?php include './views/partials/_header.php'; ?>
 
 <main>
     <?php echo $content; ?>
 </main>
 
-<?php include_once 'partials/_footer.php'; ?>
+<?php include_once './views/partials/_footer.php'; ?>
 </body>
 </html>

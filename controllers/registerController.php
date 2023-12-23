@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: index.php?page=login');
         exit();
     } else {
-        echo "Erreur d'inscription";
+        echo "Erreur d'inscription, recommencez.";
     }
 }
 

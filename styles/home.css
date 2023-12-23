@@ -1,13 +1,14 @@
 /*----- PRESENTATION ------*/
 
 #presentation {
-    height: 50vh;
+    height: 70vh;
+    background-color: #3D8477;
   }
 
   .section-title {
     text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    padding-top: 4rem;
+    margin-bottom: 6rem;
   }
   
   /* Cible la div de l'image */  
@@ -24,18 +25,26 @@
     border-radius: 15px;  
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);               
     position: relative;
-    width: 50vh;
+    width: 55vh;
+    margin-left: 7rem;
+    border: 1px solid #FCDB1B;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre uniforme tout autour */
   }
   
   
   /* Cible la div du texte */
   div.presentationDescription {
+    margin-left: 7rem;
     align-items: center;
     display: flex;
-    width: 50vh;
+    padding: 1rem;
+    width: 55vh;
+    height: 100%;
+    background-color: white;
     border-radius: 15px; /* Vous pouvez ajuster la valeur du rayon selon vos préférences */
-    border: 1px solid #ffd688; /* Pour visualiser la zone de l'élément parent */
-    overflow: hidden; /* Ou overflow: auto; selon vos préférences */
+    border: 1px solid #FCDB1B; /* Pour visualiser la zone de l'élément parent */
+    position: right;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre uniforme tout autour */
   }
   
   

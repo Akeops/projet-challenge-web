@@ -1,6 +1,4 @@
 <div class="home">
-
-    <!-- Présentation de la LOW TECH -->
     <section id="presentation">
         <div class="section-title">
             <h2>Présentation de l'association LOW TECH Bordeaux</h2>

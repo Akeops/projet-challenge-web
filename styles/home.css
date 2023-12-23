@@ -1,42 +1,41 @@
 :root {
-  --bg-color: #3D8477;
-  --highlight-color: #FCDB1B;
-  --text-color: #333;
-  --font-family: 'Gotham', bold;
+    --bg-color: #3D8477;
+    --highlight-color: #FCDB1B;
+    --text-color: #333;
+    --font-family: 'Gotham', bold;
 }
 
 .section-title {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-family: "Permanent Marker";
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Chalkduster', serif;
 }
 
-
 .divPresentation {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 div.presentation img {
-  border-radius: 5px;
-  border: 2px solid var(--bg-color);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  max-width: 100%;
+    border-radius: 5px;
+    border: 2px solid var(--bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
 }
 
 div.presentationDescription {
-  padding: 1rem;
-  background-color: white;
-  border-radius: 5px;
-  border: 2px solid var(--bg-color);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  color: var(--text-color);
-  font-family: var(--font-family);
-  max-width: 40%;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid var(--bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    max-width: 40%;
 }
 
 div.presentationDescription p {
-  margin: 0;
+    margin: 0;
 }
 

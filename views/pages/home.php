@@ -1,7 +1,7 @@
 <div class="home">
     <section id="presentation">
         <div class="section-title">
-            <h2>Présentation de l'association LOW TECH Bordeaux</h2>
+            <h2 class=titreH2>Présentation de l'association LOW TECH Bordeaux</h2>
         </div>
         <div class="divPresentation">
             <div class="presentation">

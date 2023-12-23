@@ -52,7 +52,6 @@ nav {
     margin: 10px;
     transition: all 0.3s ease;
     font-size: 1.1em;
-    text-transform: uppercase;
     font-weight: bold;
     background-color: transparent;
     display: inline-block;
@@ -67,7 +66,6 @@ nav {
     margin-top: 2px;
     transition: all 0.3s ease;
     font-size: 0.8em;
-    text-transform: uppercase;
     font-weight: bold;
     background-color: transparent;
     display: inline-block;

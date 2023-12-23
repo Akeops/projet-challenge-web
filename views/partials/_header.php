@@ -18,7 +18,8 @@
             </div>
         <?php } else { ?>
             <div class="auth-links">
-                <a href="index.php?page=profile"><?php echo 'Profile: ', $_SESSION['username'] ?></a>
+                <a href="index.php?page=profile">PROFILE</a>
+                <a href="index.php?page=logout">SE DÉCONECTER</a
             </div>
         <?php } ?>
     </nav>

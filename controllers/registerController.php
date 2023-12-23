@@ -1,4 +1,5 @@
 <?php
+
 require_once './models/usersManager.php';
 require_once './config/database.php';
 
@@ -15,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: index.php?page=login');
         exit();
     } else {
-        echo "Erreur d'inscription, recommencez.";
+        $_SESSION['error'] = "Erreur d'inscription, recommencez.";
     }
 }
 

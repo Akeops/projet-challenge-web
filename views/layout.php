@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/profile.css">
 </head>
 <body>
 <?php include './views/partials/_header.php'; ?>

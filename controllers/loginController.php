@@ -13,11 +13,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['id'] = $user['id'];
-        $_SESSION['username'] = $user['username'];
         header('Location: index.php?page=home');
         exit();
     } else {
-        echo "L'utilisateur n'existe pas. Vous pouvez procéder à l'inscription.";
+        $_SESSION['error'] = "L'utilisateur n'existe pas. Vous pouvez procéder à l'inscription.";
     }
 }
 

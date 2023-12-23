@@ -56,21 +56,21 @@ nav {
     background-color: transparent;
     display: inline-block;
     border: 2px solid;
+    border-radius: 5px;
 }
 
 .auth-links a {
     text-decoration: none;
     color: #1A4749;
     padding: 6px 10px;
-    margin-bottom: 2px;
-    margin-top: 2px;
     transition: all 0.3s ease;
     font-size: 0.8em;
     font-weight: bold;
     background-color: transparent;
     display: inline-block;
-    margin-left: 700px;
+    margin: 2px;
     border: 2px solid;
+    border-radius: 5px;
 }
 
 .nav-links a:hover, .auth-links a:hover {
@@ -79,7 +79,8 @@ nav {
 
 .auth-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-left: 620px;
 }

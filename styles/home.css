@@ -1,0 +1,45 @@
+/*----- PRESENTATION ------*/
+
+#presentation {
+    height: 50vh;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Cible la div de l'image */  
+  .divPresentation {
+    display: flex;
+    align-items: center;
+  }
+
+
+  /* Cible l'image */
+  div.presentation img {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);               
+    position: relative;
+    width: 50vh;
+  }
+  
+  
+  /* Cible la div du texte */
+  div.presentationDescription {
+    align-items: center;
+    display: flex;
+    width: 50vh;
+    border-radius: 15px; /* Vous pouvez ajuster la valeur du rayon selon vos préférences */
+    border: 1px solid #ffd688; /* Pour visualiser la zone de l'élément parent */
+    overflow: hidden; /* Ou overflow: auto; selon vos préférences */
+  }
+  
+  
+  /* Cible le texte */
+  div.presentationDescription p {                        
+    width: 100%;
+  }

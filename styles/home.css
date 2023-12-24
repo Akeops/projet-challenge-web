@@ -72,7 +72,7 @@ div.presentationDescription p {
     width: 4rem;
     max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
     height: auto; /* Garantit que l'aspect ratio de l'image est préservé */
-}
+} 
 
 /* SECTION KEZAKO */
 

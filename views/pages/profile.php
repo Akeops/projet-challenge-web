@@ -11,10 +11,12 @@
         <input type="text" id="name" name="name" value="<?= $profile['name'] ?? '' ?>" class="profile-input"
                maxlength="50">
 
+        <label for="contactInfo" class="profile-label">Information de contact :</label>
         <textarea id="contactInfo" name="contactInfo" class="profile-textarea"
-                  maxlength="500"><?= $profile['contactInfo'] ?? '' ?></textarea>
+                                                   maxlength="500"><?= $profile['contactInfo'] ?? '' ?></textarea>
         <span id="contactInfo-counter" class="char-counter">500 caractères restants</span>
 
+        <label for="description" class="profile-label">Description :</label>
         <textarea id="description" name="description" class="profile-textarea"
                   maxlength="1000"><?= $profile['description'] ?? '' ?></textarea>
         <span id="description-counter" class="char-counter">1000 caractères restants</span>

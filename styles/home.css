@@ -1,7 +1,4 @@
 :root {
-    --bg-color: #3D8477;
-    --highlight-color: #FCDB1B;
-    --text-color: #333;
     --font-family: 'Gotham', bold;
 }
 
@@ -29,7 +26,7 @@
 
 div.presentationImg img {
     border-radius: 5px;
-    border: 2px solid var(--bg-color);
+    border: 2px solid #3D8477;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     max-width: 100%;
 }
@@ -38,7 +35,7 @@ div.presentationDescription {
     padding: 1rem;
     background-color: white;
     border-radius: 5px;
-    color: var(--text-color);
+    color: #333;
     font-family: var(--font-family);
     max-width: 40%;
     margin-bottom: 1rem;
@@ -52,27 +49,23 @@ div.presentationDescription p {
 
 .conteneur-reseaux {
     display: flex;
-    align-items: center; /* Centre verticalement */
-    justify-content: center; /* Centre horizontalement */
-    padding-top: 1rem; 
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
     padding-bottom: 1rem;
-    }
+}
 
 
 .lienReseau {
-    margin-right: 1rem; /* Ajustez la marge entre les éléments si nécessaire */
-    text-decoration: none; /* Supprime le soulignement des liens, si nécessaire */
-}
-
-#divImageReseau {
-    /* Ajoutez des styles spécifiques à la div d'image si nécessaire */
+    margin-right: 1rem;
+    text-decoration: none;
 }
 
 .imageReseau {
     width: 4rem;
-    max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
-    height: auto; /* Garantit que l'aspect ratio de l'image est préservé */
-} 
+    max-width: 100%;
+    height: auto;
+}
 
 /* SECTION KEZAKO */
 
@@ -83,13 +76,13 @@ div.presentationDescription p {
 }
 
 .h2Kezako {
-    color:white;
+    color: white;
     margin-left: 10%;
     margin-bottom: 1rem;
 }
 
 .pKezako {
-    color:white;
+    color: white;
     margin-left: 7rem;
     margin-left: 10%;
 }
@@ -135,7 +128,7 @@ div.presentationImg2 img {
     padding-bottom: 2rem;
 }
 
-.liObjectif{
+.liObjectif {
     margin-bottom: 0.5rem;
 }
 

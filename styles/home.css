@@ -6,7 +6,7 @@
 }
 
 #presentation {
-    padding-top: 4rem;
+    padding-top: 2rem;
     padding-bottom: 6rem;
 }
 
@@ -46,6 +46,52 @@ div.presentationDescription {
 
 div.presentationDescription p {
     margin: 0;
+}
+
+/* SECTION RESEAU SOCIAUX */
+
+.conteneur-reseaux {
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    padding-top: 1rem; 
+    padding-bottom: 1rem;
+    }
+
+
+.lienReseau {
+    margin-right: 1rem; /* Ajustez la marge entre les éléments si nécessaire */
+    text-decoration: none; /* Supprime le soulignement des liens, si nécessaire */
+}
+
+#divImageReseau {
+    /* Ajoutez des styles spécifiques à la div d'image si nécessaire */
+}
+
+.imageReseau {
+    width: 4rem;
+    max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
+    height: auto; /* Garantit que l'aspect ratio de l'image est préservé */
+}
+
+/* SECTION KEZAKO */
+
+#kezako {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: #31356E;
+}
+
+.h2Kezako {
+    color:white;
+    margin-left: 10%;
+    margin-bottom: 1rem;
+}
+
+.pKezako {
+    color:white;
+    margin-left: 7rem;
+    margin-left: 10%;
 }
 
 /* SECTION ACTIVITE */
@@ -91,4 +137,19 @@ div.presentationImg2 img {
 
 .liObjectif{
     margin-bottom: 0.5rem;
+}
+
+#lesPartenaires {
+    background-color: #1A4749;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.lienPartenaire {
+    text-decoration: none;
+    color: rgba(254, 223, 38, 1);;
+}
+
+.lienPartenaire:hover {
+    color: black;
 }

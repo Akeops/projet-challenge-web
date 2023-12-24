@@ -30,7 +30,6 @@
         <fieldset class="fieldset">
             <legend class="legend">Compétences :</legend>
             <?php foreach ($skills as $skill): ?>
-                <?php var_dump($skill); ?>
                 <div>
                     <input type="checkbox" id="skill<?= $skill['id'] ?>" name="skills[]"
                            value="<?= $skill['id'] ?>" <?= is_array($selectedSkills) && in_array($skill['id'], $selectedSkills) ? 'checked' : '' ?>

@@ -1,0 +1,155 @@
+:root {
+    --bg-color: #3D8477;
+    --highlight-color: #FCDB1B;
+    --text-color: #333;
+    --font-family: 'Gotham', bold;
+}
+
+#presentation {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-family: 'Oswald', serif;
+}
+
+.sous-titres {
+    font-family: 'Oswald', serif;
+    color: #1A4749;
+}
+
+.divPresentation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.presentationImg img {
+    border-radius: 5px;
+    border: 2px solid var(--bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+}
+
+div.presentationDescription {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    max-width: 40%;
+    margin-bottom: 1rem;
+}
+
+div.presentationDescription p {
+    margin: 0;
+}
+
+/* SECTION RESEAU SOCIAUX */
+
+.conteneur-reseaux {
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    padding-top: 1rem; 
+    padding-bottom: 1rem;
+    }
+
+
+.lienReseau {
+    margin-right: 1rem; /* Ajustez la marge entre les éléments si nécessaire */
+    text-decoration: none; /* Supprime le soulignement des liens, si nécessaire */
+}
+
+#divImageReseau {
+    /* Ajoutez des styles spécifiques à la div d'image si nécessaire */
+}
+
+.imageReseau {
+    width: 4rem;
+    max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
+    height: auto; /* Garantit que l'aspect ratio de l'image est préservé */
+} 
+
+/* SECTION KEZAKO */
+
+#kezako {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: #31356E;
+}
+
+.h2Kezako {
+    color:white;
+    margin-left: 10%;
+    margin-bottom: 1rem;
+}
+
+.pKezako {
+    color:white;
+    margin-left: 7rem;
+    margin-left: 10%;
+}
+
+/* SECTION ACTIVITE */
+
+#activite {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: #1A4749;
+}
+
+.presentationDescription2 {
+    background-color: #1A4749;
+    padding: 1rem;
+    border-radius: 5px;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    max-width: 40%;
+    margin-bottom: 1rem;
+
+}
+
+.titreH2AvecFond {
+    color: rgba(254, 223, 38, 1);
+}
+
+
+div.presentationDescription2 p {
+    margin: 0;
+    color: white;
+}
+
+div.presentationImg2 img {
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+/* SECTION PROJET TINY HOUSE */
+
+#projetTinyHouse {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.liObjectif{
+    margin-bottom: 0.5rem;
+}
+
+#lesPartenaires {
+    background-color: #1A4749;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.lienPartenaire {
+    text-decoration: none;
+    color: rgba(254, 223, 38, 1);;
+}
+
+.lienPartenaire:hover {
+    color: black;
+}

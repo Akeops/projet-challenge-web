@@ -24,7 +24,7 @@ if (!$profile) {
 } else {
     $selectedSkills = $profileManager->getProfileSkills($profile['id']);
 }
-$selectedSkills = isset($selectedSkills) ? $selectedSkills : [];
+$selectedSkills = $selectedSkills ?? [];
 $skills = $profileManager->getSkills();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $contactInfo = $_POST['contactInfo'];
     $description = $_POST['description'];
     $showInDirectory = isset($_POST['showInDirectory']) ? 1 : 0;
-    $skillIds = isset($_POST['skills']) ? $_POST['skills'] : [];
+    $skillIds = $_POST['skills'] ?? [];
     if (count($skillIds) > 2) {
         $_SESSION['error'] = "Veuillez sélectionner au maximum deux compétences.";
     } else {

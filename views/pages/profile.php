@@ -1,3 +1,5 @@
+<?php global $skills; ?>
+
 <div class="profile-container">
     <?php if (!empty($_SESSION['error'])): ?>
         <div class="error-container">
@@ -13,7 +15,7 @@
 
         <label for="contactInfo" class="profile-label">Information de contact :</label>
         <textarea id="contactInfo" name="contactInfo" class="profile-textarea"
-                                                   maxlength="500"><?= $profile['contactInfo'] ?? '' ?></textarea>
+                  maxlength="500"><?= $profile['contactInfo'] ?? '' ?></textarea>
         <span id="contactInfo-counter" class="char-counter">500 caractères restants</span>
 
         <label for="description" class="profile-label">Description :</label>

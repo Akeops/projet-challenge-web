@@ -1,11 +1,14 @@
 <?php
 
-const AVAILABLE_ROUTES = [
+$availableRoutes = [
     'home' => 'homeController.php',
     'register' => 'registerController.php',
     'login' => 'loginController.php',
-    'logout' => 'logoutController.php',
-    'profile' => 'profileController.php'
+    'logout' => 'logoutController.php'
 ];
 
-const DEFAULT_ROUTE = AVAILABLE_ROUTES['home'];
+if (isset($_SESSION['id'])) {
+    $availableRoutes['profile'] = 'profileController.php';
+}
+
+$defaultRoute = $availableRoutes['home'];

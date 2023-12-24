@@ -1,13 +1,14 @@
 <?php
 
-require './config/routes.php';
+require 'config/routes.php';
 
-$availableRouteNames = array_keys(AVAILABLE_ROUTES);
+function getController($page): string
+{
+    global $availableRoutes, $defaultRoute;
 
-if (isset($_GET['page']) && in_array($_GET['page'], $availableRouteNames, true)) {
-	$controller = AVAILABLE_ROUTES[$_GET['page']];
-} else {
-	$controller = DEFAULT_ROUTE;
+    if ($page !== null && array_key_exists($page, $availableRoutes)) {
+        return $availableRoutes[$page];
+    } else {
+        return $defaultRoute;
+    }
 }
-
-require './controllers/' . $controller;

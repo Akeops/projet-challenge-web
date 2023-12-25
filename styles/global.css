@@ -1,3 +1,7 @@
+:root {
+    --font-family: 'Gotham', bold;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;

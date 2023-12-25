@@ -1,11 +1,11 @@
 <div class="home">
     <section id="presentation">
         <div class="section-title">
-            <h2 class=titreH2>Présentation de l'association LOW TECH Bordeaux</h2>
+            <h2 class=titreH2>Présentation de l'association</h2>
         </div>
         <div class="divPresentation">
             <div class="presentationImg">
-                <img src="./img/lowTechPresentation.PNG" alt="photo du logo LowTech">
+                <img src="./img/logo2.png" alt="photo du logo LowTech">
             </div>
             <div class="presentationDescription">
                 <p>Nous sommes une association qui croit au pouvoir de l’innovation utile, accessible et durable pour
@@ -40,7 +40,10 @@
 
 
     <section id="kezako">
-        <h2 class="h2Kezako">Qu’est-ce qu’une low-tech ?</h2>
+        <div class="section-title">
+            <h2 class=titreH2AvecFondK>Kézako ?</h2>
+        </div>
+        <h3 class="h3question1">Qu’est-ce qu’une low-tech ?</h3>
         <p class="pKezako">« Une technologie simple répondant à un besoin de base, qui est durable dans le temps,
             facilement utilisable et constructible, mais est aussi une technologie incluant de la sobriété et
             participant à votre résilience. »</p>
@@ -99,84 +102,84 @@
                 <img src="./img/planete.png" class="" alt="photo de planete jaune">
             </div>
         </div>
-</div>
-</section>
+    </section>
 
-<section id="projetTinyHouse">
-    <div class="section-title">
-        <h2 class=titreH2>Le projet Tiny House</h2>
-    </div>
-    <div class="divPresentation">
-        <div class="presentationImg">
-            <img src="./img/tinyHouses.PNG" alt="photo du logo LowTech">
+    <section id="projetTinyHouse">
+        <div class="section-title">
+            <h2 class=titreH2>Le projet Tiny House</h2>
         </div>
-        <div class="presentationDescription">
-            <b class="sous-titres">LE PROJET</b>
-            <br>
-            <br>
-            L’association va, au cours des deux prochaines années, entreprendre un projet de construction de Tiny House
-            équipées de Low-Techs, tels qu’un poële de masse, un garde manger, marmite norvégienne ou une jardinière
-            autonome.
-            <br>
-            <br>
-            Ce projet fera collaborer différentes associations, et la tiny sera exposée sur les quais de la Garonne à
-            Bordeaux.
-            <br>
-            <br>
-            <b class="sous-titres">LES OBJECTIFS</b>
-            <br>
-            <br>
-            <ul>
-                <li class="liObjectif">Sensibiliser le grand public autour des enjeux écologiques, l'éco-construction,
-                    de la low tech et du réemploi.
-                </li>
-                <li class="liObjectif">Proposer des chantiers participatifs où chacun peut venir contriber ou apprendre
-                    à bricoler
-                </li>
-                <li class="liObjectif">Produire une documentation, éventuellement sous forme d'un livre blanc open
-                    source pour attester du retour d'expérience et des performances du démonstrateur
-                </li>
-                <li class="liObjectif" style="font-weight: 600;">**Experimentation d’une plateforme de mise en relation
-                    entre les différents acteurs, mécènes et bénévoles**
-                </li>
-            </ul>
-            <br>
-            <br>
-            En créant un maillage des acteurs Low Tech sur le territoire, l’association veut devenir la vitrine du
-            réseau Low Tech de la région, développer des partenariats avec les autres acteurs et créer une dynamique sur
-            le territoire de la Nouvelle-Aquitaine.
+        <div class="divPresentation">
+            <div class="presentationImg3">
+                <img src="./img/tinyHouses.png" alt="photo d'une Tiny House">
+            </div>
+            <div class="presentationDescription">
+                <b class="sous-titres">LE PROJET</b>
+                <br>
+                <br>
+                L’association va, au cours des deux prochaines années, entreprendre un projet de construction de Tiny
+                House
+                équipées de Low-Techs, tels qu’un poële de masse, un garde manger, marmite norvégienne ou une jardinière
+                autonome.
+                <br>
+                <br>
+                Ce projet fera collaborer différentes associations, et la tiny sera exposée sur les quais de la Garonne
+                à
+                Bordeaux.
+                <br>
+                <br>
+                <b class="sous-titres">LES OBJECTIFS</b>
+                <br>
+                <br>
+                <ul>
+                    <li class="liObjectif">Sensibiliser le grand public autour des enjeux écologiques,
+                        l'éco-construction,
+                        de la low tech et du réemploi.
+                    </li>
+                    <li class="liObjectif">Proposer des chantiers participatifs où chacun peut venir contriber ou
+                        apprendre
+                        à bricoler
+                    </li>
+                    <li class="liObjectif">Produire une documentation, éventuellement sous forme d'un livre blanc open
+                        source pour attester du retour d'expérience et des performances du démonstrateur
+                    </li>
+                    <li class="liObjectif" style="font-weight: 600;">**Experimentation d’une plateforme de mise en
+                        relation
+                        entre les différents acteurs, mécènes et bénévoles**
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="lesPartenaires">
-    <div class="section-title">
-        <h2 class=titreH2AvecFond>Les partenaires</h2>
-    </div>
-    <div class="divPresentation">
-        <div class="presentationDescription2">
-            <p>Le projet est une collaboration avec deux autres structures:
-                <br>
-                <br>
-                <a class="lienPartenaire" href="https://tinylabassociation.dorik.io//" target="_blank">[TinyLab]</a>
-                <br>
-                <br>
-                Association créée par des professionnels de l'éco-construction, dont les activités se concentrent autour
-                de la construction inclusive de tiny houses et habitats légers autonomes.
-                <br>
-                <br>
-                <a class="lienPartenaire" href="https://laplanche-bois.fr/" target="_blank">[La Planche]</a>
-                <br>
-                <br>
-                Atelier partagé situé dans le quartier Saint-Michel à Bordeaux entièrement dédié au matériau bois, dans
-                lequel artisans·anes, concepteurs·trices et grand public viennent mutualiser des outils de travail,
-                apprendre, fabriquer et partager leurs savoir-faire.
-            </p>
+    <section id="lesPartenaires">
+        <div class="section-title">
+            <h2 class=titreH2AvecFond>Les partenaires</h2>
         </div>
-        <div class="presentationImg2">
-            <img src="./img/marteau.png" class="" alt="image du tinylab">
+        <div class="divPresentation">
+            <div class="presentationDescription2">
+                <p>
+                    <br>
+                    <br>
+                    <a class="lienPartenaire" href="https://tinylabassociation.dorik.io//" target="_blank">[TinyLab]</a>
+                    <br>
+                    <br>
+                    Association créée par des professionnels de l'éco-construction, dont les activités se concentrent
+                    autour
+                    de la construction inclusive de tiny houses et habitats légers autonomes.
+                    <br>
+                    <br>
+                    <a class="lienPartenaire" href="https://laplanche-bois.fr/" target="_blank">[La Planche]</a>
+                    <br>
+                    <br>
+                    Atelier partagé situé dans le quartier Saint-Michel à Bordeaux entièrement dédié au matériau bois,
+                    dans
+                    lequel artisans·anes, concepteurs·trices et grand public viennent mutualiser des outils de travail,
+                    apprendre, fabriquer et partager leurs savoir-faire.
+                </p>
+            </div>
+            <div class="presentationImg4">
+                <img src="./img/marteau.png" class="" alt="image du tinylab">
+            </div>
         </div>
-    </div>
-    </div>
-</section>
+    </section>
 </div>

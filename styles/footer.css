@@ -7,7 +7,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    font-family: 'Gotham', sans-serif;
+    font-family: var(--font-family);
 }
 
 footer p {

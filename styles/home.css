@@ -1,21 +1,22 @@
-:root {
-    --font-family: 'Gotham', bold;
-}
-
 #presentation {
-    padding-top: 2rem;
-    padding-bottom: 6rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .section-title {
     text-align: center;
     padding-bottom: 2rem;
-    font-family: 'Oswald', serif;
+    font-family: 'Chalkduster', serif;
+    font-size: 2rem;
 }
 
 .sous-titres {
-    font-family: 'Oswald', serif;
+    font-family: 'Comic Sans MS', serif;
     color: #1A4749;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    padding: 5px 2px;
 }
 
 .divPresentation {
@@ -25,20 +26,23 @@
 }
 
 div.presentationImg img {
-    border-radius: 5px;
-    border: 2px solid #3D8477;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    max-width: 100%;
+    width: auto;
+    height: 500px;
+    display: block;
+    border: none;
+    vertical-align: middle;
 }
 
 div.presentationDescription {
-    padding: 1rem;
     background-color: white;
     border-radius: 5px;
     color: #333;
     font-family: var(--font-family);
-    max-width: 40%;
+    max-width: 50%;
     margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    padding: 2rem;
 }
 
 div.presentationDescription p {
@@ -51,8 +55,8 @@ div.presentationDescription p {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 
@@ -73,18 +77,32 @@ div.presentationDescription p {
     padding-top: 3rem;
     padding-bottom: 3rem;
     background-color: #31356E;
+    font-family: var(--font-family);
 }
 
-.h2Kezako {
+.h3question1 {
     color: white;
-    margin-left: 10%;
+    margin-left: 11%;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-size: 1.4rem;
 }
 
 .pKezako {
     color: white;
     margin-left: 7rem;
     margin-left: 10%;
+}
+
+/* SECTION RESEAUX */
+
+#reseauSociaux {
+    padding: 40px;
+}
+
+div.conteneur-reseaux {
+    padding: 0;
+    padding-top: 5px;
 }
 
 /* SECTION ACTIVITE */
@@ -97,11 +115,10 @@ div.presentationDescription p {
 
 .presentationDescription2 {
     background-color: #1A4749;
-    padding: 1rem;
     border-radius: 5px;
     color: var(--text-color);
     font-family: var(--font-family);
-    max-width: 40%;
+    max-width: 55%;
     margin-bottom: 1rem;
 
 }
@@ -110,6 +127,9 @@ div.presentationDescription p {
     color: rgba(254, 223, 38, 1);
 }
 
+.titreH2AvecFondK {
+    color: white;
+}
 
 div.presentationDescription2 p {
     margin: 0;
@@ -117,8 +137,11 @@ div.presentationDescription2 p {
 }
 
 div.presentationImg2 img {
-    border-radius: 5px;
-    max-width: 100%;
+    width: auto;
+    height: 500px;
+    display: block;
+    border: none;
+    vertical-align: middle;
 }
 
 /* SECTION PROJET TINY HOUSE */
@@ -130,6 +153,17 @@ div.presentationImg2 img {
 
 .liObjectif {
     margin-bottom: 0.5rem;
+}
+
+div.presentationImg3 img {
+    width: auto;
+    height: 400px;
+    display: block;
+    border: none;
+    vertical-align: middle;
+    mask: linear-gradient(to right, transparent, black 2%, black 98%, transparent),
+    linear-gradient(to bottom, transparent, black 2%, black 98%, transparent);
+    mask-composite: intersect;
 }
 
 #lesPartenaires {
@@ -145,4 +179,12 @@ div.presentationImg2 img {
 
 .lienPartenaire:hover {
     color: black;
+}
+
+div.presentationImg4 img {
+    width: auto;
+    height: 300px;
+    display: block;
+    border: none;
+    vertical-align: middle;
 }

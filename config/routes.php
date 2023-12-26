@@ -4,7 +4,8 @@ $availableRoutes = [
     'home' => 'homeController.php',
     'register' => 'registerController.php',
     'login' => 'loginController.php',
-    'logout' => 'logoutController.php'
+    'logout' => 'logoutController.php',
+    'directory' => 'directoryController.php'
 ];
 
 if (isset($_SESSION['id'])) {

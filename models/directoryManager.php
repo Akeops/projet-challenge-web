@@ -1,5 +1,5 @@
 <?php
-require_once './config/database.php';
+require_once __DIR__ . '/../config/database.php';
 
 class DirectoryManager
 {
@@ -11,44 +11,13 @@ class DirectoryManager
         $this->db = $database->dbConnect();
     }
 
-    public function registerUser($username, $password, $email): bool
+    function getUsersByShowInDirectory()
     {
-        if ($this->isUserExists($username, $email)) {
-            return false;
-        }
+        $showInDirectoryValue = 1;
 
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        $stmt = $this->db->prepare('INSERT INTO users (username, password, email, registrationDate) VALUES (:username, :password, :email, NOW())');
-        $stmt->bindParam(':username', $username);
-        $stmt->bindParam(':password', $hashedPassword);
-        $stmt->bindParam(':email', $email);
-
-        if ($stmt->execute()) {
-            $userId = $this->db->lastInsertId();
-
-            $rolesManager = new RolesManager();
-            $rolesManager->setRole($userId, 'standard');
-
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    private function isUserExists($username, $email): bool
-    {
-        $stmt = $this->db->prepare('SELECT id FROM users WHERE username = :username OR email = :email');
-        $stmt->bindParam(':username', $username);
-        $stmt->bindParam(':email', $email);
+        $stmt = $this->db->prepare('SELECT * FROM profile WHERE showInDirectory = showInDirectory');
+        $stmt->bindParam(':showInDirectory', $showInDirectoryValue);
         $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC) != false;
-    }
-
-    function getUserByEmail($email)
-    {
-        $stmt = $this->db->prepare('SELECT id, username, email, password FROM users WHERE email = :email');
-        $stmt->bindParam(':email', $email);
-        $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

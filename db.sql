@@ -4,7 +4,8 @@ CREATE TABLE USERS
     username VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
-    registrationDate DATE NOT NULL
+    registrationDate DATE NOT NULL,
+    roleId INT REFERENCES ROLE (id)
 );
 
 CREATE TABLE POST
@@ -67,13 +68,26 @@ CREATE TABLE PROFILE_SKILL
 CREATE TABLE ROLE
 (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    userId INT REFERENCES USERS (id)
+    name VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE PERMISSION
-(
-    id SERIAL PRIMARY KEY,
-    description TEXT NOT NULL,
-    roleId INT REFERENCES ROLE (id)
-);
+/*USE SITE_WEB;
+
+INSERT INTO ROLE (name)
+VALUES ('standard'),
+       ('modo'),
+       ('admin');
+
+USE SITE_WEB;
+
+INSERT INTO SKILL (name, description)
+VALUES ('Programmation', 'Compétences en programmation logicielle'),
+       ('Design Web', 'Création et design de sites Web'),
+       ('Analyse de données', 'Compétences en analyse et interprétation de données'),
+       ('Gestion de projet', 'Compétences en gestion de projets et organisation'),
+       ('Réseaux sociaux', 'Gestion et optimisation de présence sur les réseaux sociaux'),
+       ('Marketing digital', 'Compétences en marketing digital et en ligne'),
+       ('Intelligence artificielle', 'Connaissance en IA et apprentissage automatique'),
+       ('Cybersécurité', 'Compétences en sécurité informatique et protection des données'),
+       ('Développement mobile', 'Développement dapplications pour smartphones'),
+       ('Cloud Computing', 'Gestion et déploiement de services cloud');*/

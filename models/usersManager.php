@@ -1,5 +1,6 @@
 <?php
 require_once './config/database.php';
+require_once 'rolesManager.php';
 
 class UsersManager
 {
@@ -11,7 +12,7 @@ class UsersManager
         $this->db = $database->dbConnect();
     }
 
-    public function registerUser($username, $password, $email)
+    public function registerUser($username, $password, $email): bool
     {
         if ($this->isUserExists($username, $email)) {
             return false;
@@ -22,10 +23,20 @@ class UsersManager
         $stmt->bindParam(':username', $username);
         $stmt->bindParam(':password', $hashedPassword);
         $stmt->bindParam(':email', $email);
-        return $stmt->execute();
+
+        if ($stmt->execute()) {
+            $userId = $this->db->lastInsertId();
+
+            $rolesManager = new RolesManager();
+            $rolesManager->setRole($userId, 'standard');
+
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    private function isUserExists($username, $email)
+    private function isUserExists($username, $email): bool
     {
         $stmt = $this->db->prepare('SELECT id FROM users WHERE username = :username OR email = :email');
         $stmt->bindParam(':username', $username);

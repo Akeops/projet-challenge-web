@@ -6,9 +6,9 @@ require_once './config/database.php';
 $userManager = new UsersManager();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = isset($_POST['username']) ? $_POST['username'] : '';
-    $password = isset($_POST['password']) ? $_POST['password'] : '';
-    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
+    $email = $_POST['email'] ?? '';
 
     $registrationSuccess = $userManager->registerUser($username, $password, $email);
 

@@ -7,8 +7,8 @@ $userManager = new UsersManager();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $email = isset($_POST['email']) ? $_POST['email'] : '';
-    $password = isset($_POST['password']) ? $_POST['password'] : '';
+    $email = $_POST['email'] ?? '';
+    $password = $_POST['password'] ?? '';
     $user = $userManager->getUserByEmail($email);
 
     if ($user && password_verify($password, $user['password'])) {

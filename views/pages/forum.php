@@ -36,6 +36,7 @@ foreach ($posts as $post) {
         echo "</div>";
     }
 
+    echo "<br>";
     echo "<p>Likes: " . count($likesByPost[$post['id']]) . "</p>";
     echo "<p>Participations: " . count($participationsByPost[$post['id']]) . "</p>";
 

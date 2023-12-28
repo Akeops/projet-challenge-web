@@ -17,7 +17,7 @@
                     if (!empty($user['skills'])) {
                         echo '<strong>Compétences:</strong> ';
                         foreach ($user['skills'] as $skill) {
-                            echo htmlspecialchars($skill) . ', ';
+                            echo " - " . htmlspecialchars($skill);
                         }
                     } else {
                         echo '<em>Aucune compétence trouvée pour cet utilisateur.</em><br>';

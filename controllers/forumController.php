@@ -6,7 +6,7 @@ require_once './config/database.php';
 $forumManager = new ForumManager();
 $rolesManager = new RolesManager();
 
-$userId = isset($_SESSION['id']) ? $_SESSION['id'] : null;
+$userId = $_SESSION['id'] ?? null;
 $userRole = $userId ? $rolesManager->getRole($userId)['name'] : null;
 
 $posts = $forumManager->getPosts();

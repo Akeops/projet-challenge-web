@@ -60,7 +60,10 @@ class ForumManager
 
     public function getCommentsByPost($postId)
     {
-        $stmt = $this->db->prepare("SELECT * FROM COMMENT WHERE postId = :postId");
+        $stmt = $this->db->prepare("SELECT COMMENT.id, COMMENT.content, COMMENT.commentDate, COMMENT.postId, COMMENT.userID, USERS.username
+                                FROM COMMENT 
+                                INNER JOIN USERS ON COMMENT.userId= USERS.id  
+                                WHERE postId = :postId");
         $stmt->bindParam(':postId', $postId, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

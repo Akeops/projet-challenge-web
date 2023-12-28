@@ -1,15 +1,20 @@
 <?php
+echo "<div class='forum-page'>";
 foreach ($posts as $post) {
     echo "<div class='post'>";
+    echo "<div class='post-header'>";
     echo "<h2>" . htmlspecialchars($post['title']) . "</h2>";
+    echo "<br>";
     echo "<p>" . htmlspecialchars($post['content']) . "</p>";
+    echo "<br>";
     echo "<p>Date: " . htmlspecialchars($post['postDate']) . "</p>";
     echo "<p>Auteur: " . htmlspecialchars($post['username']) . "</p>";
+    echo "</div>";
 
     foreach ($commentsByPost[$post['id']] as $comment) {
         echo "<div class='comment'>";
-        echo "<p>" . htmlspecialchars($comment['content']) . "</p>";
-        if ($userId == $comment['userId'] || $userRole === 'modo' || $userRole === 'admin') {
+        echo "<p>" . htmlspecialchars($comment['content']) . '<br> <br> Posté par: ' . htmlspecialchars($comment['username']) . "</p>";
+        if ($userId == $comment['id'] || $userRole === 'modo' || $userRole === 'admin') {
             echo "<a href='index.php?page=forum&deleteComment&commentId=" . $comment['id'] . "'>Supprimer</a>";
         }
         echo "</div>";
@@ -81,3 +86,4 @@ if ($userRole === 'modo' || $userRole === 'admin') {
     echo "</form>";
     echo "</div>";
 }
+echo "</div>";

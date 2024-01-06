@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./styles/home.css">
     <link rel="stylesheet" href="./styles/profile.css">
     <link rel="stylesheet" href="./styles/login-register.css">
+    <link rel="stylesheet" href="./styles/directory.css">
     <link rel="stylesheet" href="./styles/forum.css">
 </head>
 <body>

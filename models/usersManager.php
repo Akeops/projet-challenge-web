@@ -52,4 +52,37 @@ class UsersManager
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function deleteUser($userId): bool
+    {
+        try {
+            $this->db->beginTransaction();
+
+            $stmt = $this->db->prepare('DELETE FROM likes WHERE userId = :userId');
+            $stmt->bindParam(':userId', $userId);
+            $stmt->execute();
+
+            $stmt = $this->db->prepare('DELETE FROM comment WHERE userId = :userId');
+            $stmt->bindParam(':userId', $userId);
+            $stmt->execute();
+
+            $stmt = $this->db->prepare('DELETE FROM participation WHERE userId = :userId');
+            $stmt->bindParam(':userId', $userId);
+            $stmt->execute();
+
+            $stmt = $this->db->prepare('DELETE FROM profile WHERE userId = :userId');
+            $stmt->bindParam(':userId', $userId);
+            $stmt->execute();
+
+            $stmt = $this->db->prepare('DELETE FROM users WHERE id = :userId');
+            $stmt->bindParam(':userId', $userId);
+            $stmt->execute();
+
+            $this->db->commit();
+            return true;
+        } catch (Exception $e) {
+            $this->db->rollBack();
+            return false;
+        }
+    }
 }

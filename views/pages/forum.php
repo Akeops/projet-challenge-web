@@ -3,7 +3,7 @@ echo "<div class='forum-page'>";
 foreach ($posts as $post) {
     echo "<div class='post'>";
     echo "<div class='post-header'>";
-    echo "<h2>" . htmlspecialchars($post['title']) . "</h2>";
+    echo "<h2 class='h2forum'>" . htmlspecialchars($post['title']) . "</h2>";
     echo "<br>";
     echo "<p>" . htmlspecialchars($post['content']) . "</p>";
     echo "<br>";

@@ -21,11 +21,12 @@
     margin-bottom: 10px;
 }
 
-.forum-page .post-title {
-    color: #333;
+.h2forum {
+    color: #007BFF;
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 10px;
+
 }
 
 .forum-page .post-date, .forum-page .post-author {

@@ -16,7 +16,7 @@ $getUsersAndSkills = $directoryManager->getUsersSkillsForDirectory();
 
 $users = [];
 
-if ($userRole === 'standard' || $userRole === 'modo') {
+if ($userRole === 'standard' || $userRole === 'modo' || $userRole === null) {
     foreach ($getUsersAndSkills as $userSkill) {
         $userId = $userSkill['id'] ?? '';
 

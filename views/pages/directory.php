@@ -23,7 +23,7 @@
         echo '</div>';
     }
 
-    if ($userRole === 'standard' || $userRole === 'modo') {
+    if ($userRole === 'standard' || $userRole === 'modo' || $userRole === null) {
         if (!empty($users)) {
             echo '<div class="divPresentation">';
             echo '<div class="presentationDescription">';

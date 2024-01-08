@@ -50,6 +50,10 @@ class Database {
 ### Initialiser la base de données
 Créer la base données avec toutes les tables nécéssaires (un fichier `db.sql`est disponnible dans la racine du projet avec toutes les requêtes):
 ```SQL
+CREATE DATABASE SITE_WEB;
+
+USE SITE_WEB;
+
 CREATE TABLE USERS
 (
     id SERIAL PRIMARY KEY,
@@ -125,6 +129,8 @@ CREATE TABLE ROLE
 ### Rajouter des valeurs d'exemples pour les compétences
 Les compétences devront être définies directement dans la base de données pour que les utilisateurs choisissent dans un profil.
 ```SQL
+USE SITE_WEB;
+
 INSERT INTO SKILL (name, description)
 VALUES ('Programmation', 'Compétences en programmation logicielle'),
        ('Design Web', 'Création et design de sites Web'),
@@ -140,6 +146,8 @@ VALUES ('Programmation', 'Compétences en programmation logicielle'),
 ### Rajouter les 3 rôles de l'application
 Les 3 rôles `standard`,`modo`et `admin` doivent être définis directement dans la base de données. Un admin (`ID 3`) ne peut être défini que dans la base de données dans la table `USERS` à la colonne `roleId` qui est la clé étrangère de la table `ROLE`.
 ```SQL
+USE SITE_WEB;
+
 INSERT INTO ROLE (name)
 VALUES ('standard'),
        ('modo'),

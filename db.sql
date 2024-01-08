@@ -1,3 +1,7 @@
+CREATE DATABASE SITE_WEB;
+
+USE SITE_WEB;
+
 CREATE TABLE USERS
 (
     id SERIAL PRIMARY KEY,
@@ -70,14 +74,10 @@ CREATE TABLE ROLE
     name VARCHAR(255) NOT NULL
 );
 
-USE SITE_WEB;
-
 INSERT INTO ROLE (name)
 VALUES ('standard'),
        ('modo'),
        ('admin');
-
-USE SITE_WEB;
 
 INSERT INTO SKILL (name, description)
 VALUES ('Programmation', 'Compétences en programmation logicielle'),

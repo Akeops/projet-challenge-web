@@ -53,3 +53,60 @@ em {
     padding: 5px 10px;
     border-radius: 5px;
 }
+
+.auth-container-directory {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    flex-direction: row;
+}
+
+.form-directory {
+    background: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-directory {
+    margin-bottom: 5px;
+    color: #333;
+    display: flex;
+}
+
+.input-field-directory {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    width: 400px;
+}
+
+.submit-button-directory {
+    cursor: pointer;
+    color: #1A4749;
+    padding: 10px 15px;
+    margin: 5px;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: transparent;
+    display: flex;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.submit-button-directory:hover {
+    color: #54C3BA;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}

@@ -12,67 +12,75 @@ $usersManager = new UsersManager();
 $userIdRole = $_SESSION['id'] ?? null;
 $userRole = $userIdRole ? $rolesManager->getRole($userIdRole)['name'] : null;
 
-$getUsersAndSkills = $directoryManager->getUsersSkillsForDirectory();
+$searchTerm = htmlspecialchars($_GET['search'] ?? '');
+$uniqueUsers = [];
 
-$users = [];
+function groupUserSkills($users): array
+{
+    $groupedUsers = [];
 
-if ($userRole === 'standard' || $userRole === 'modo' || $userRole === null) {
-    foreach ($getUsersAndSkills as $userSkill) {
-        $userId = $userSkill['id'] ?? '';
+    foreach ($users as $user) {
+        $userId = $user['id'] ?? $user['userId'];
 
-        if (!isset($users[$userId])) {
-            $users[$userId] = [
+        if (!array_key_exists($userId, $groupedUsers)) {
+            $groupedUsers[$userId] = [
                 'userId' => $userId,
-                'name' => $userSkill['name'] ?? '',
-                'contactInfo' => $userSkill['contactInfo'] ?? '',
-                'description' => $userSkill['description'] ?? '',
+                'name' => $user['name'] ?? $user['username'],
+                'contactInfo' => $user['contactInfo'] ?? '',
+                'description' => $user['description'] ?? '',
+                'role' => $user['role'] ?? '',
                 'skills' => []
             ];
         }
 
-        if (!empty($userSkill['skillName'])) {
-            $users[$userId]['skills'][] = $userSkill['skillName'];
+        if (!empty($user['skillName']) && !in_array($user['skillName'], $groupedUsers[$userId]['skills'])) {
+            $groupedUsers[$userId]['skills'][] = $user['skillName'];
         }
     }
+
+    return $groupedUsers;
 }
 
-if ($userRole === 'admin') {
-    $getAllUsers = $directoryManager->getAllUsersForDirectory();
-
-    $usersAll = [];
-
-    foreach ($getAllUsers as $userAll) {
-        $userAllId = $userAll['id'] ?? '';
-        $userAllUsername = $userAll['username'] ?? '';
-        $userAllActRole = $rolesManager->getRole($userAllId)['name'] ?? '';
-
-        if (!isset($usersAll[$userAllId])) {
-            $usersAll[$userAllId] = [
-                'userId' => $userAllId,
-                'role' => $userAllActRole,
-                'username' => $userAllUsername,
-            ];
-        }
-    }
+if (!empty($searchTerm)) {
+    $users = $directoryManager->searchUsers($userRole, $searchTerm);
+} else {
+    $users = ($userRole === 'admin') ? $directoryManager->getAllUsersForDirectory() : $directoryManager->getUsersSkillsForDirectory();
 }
 
-if ($userRole === 'admin') {
-    if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['deleteUser'])) {
+$uniqueUsers = groupUserSkills($users);
+
+if ($userRole === 'admin' && $_SERVER['REQUEST_METHOD'] == 'GET') {
+    if (isset($_GET['deleteUser'])) {
         $usersManager->deleteUser($_GET['userId']);
         header("Location: index.php?page=directory");
         exit;
     }
-    if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['grantModo'])) {
+    if (isset($_GET['grantModo'])) {
         $rolesManager->grantModo($_GET['userId']);
         header("Location: index.php?page=directory");
         exit;
     }
-    if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['downgradeToStandard'])) {
+    if (isset($_GET['downgradeToStandard'])) {
         $rolesManager->downgradeToStandard($_GET['userId']);
         header("Location: index.php?page=directory");
         exit;
     }
 }
+
+$usersPerPage = 5;
+$totalUsers = count($uniqueUsers);
+$totalPages = ceil($totalUsers / $usersPerPage);
+
+$currentPage = isset($_GET['nbpage']) ? (int)$_GET['nbpage'] : 1;
+$currentPage = max($currentPage, 1);
+$currentPage = min($currentPage, $totalPages);
+
+$displayUsers = array_slice($uniqueUsers, ($currentPage - 1) * $usersPerPage, $usersPerPage, true);
+
+$maxPagesToShow = 15;
+$startPage = max(1, $currentPage - floor($maxPagesToShow / 2));
+$endPage = min($totalPages, $startPage + $maxPagesToShow - 1);
+$startPage = max(1, min($startPage, $totalPages - $maxPagesToShow + 1));
 
 ob_start();
 include './views/pages/directory.php';

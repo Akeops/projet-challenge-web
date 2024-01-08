@@ -37,7 +37,7 @@ CREATE TABLE PARTICIPATION
 (
     id SERIAL PRIMARY KEY,
     postId INT REFERENCES POST (id),
-    userId INT REFERENCES USERS (id),
+    userId INT REFERENCES USERS (id)
 );
 
 CREATE TABLE PROFILE
@@ -70,7 +70,7 @@ CREATE TABLE ROLE
     name VARCHAR(255) NOT NULL
 );
 
-/*USE SITE_WEB;
+USE SITE_WEB;
 
 INSERT INTO ROLE (name)
 VALUES ('standard'),
@@ -89,4 +89,4 @@ VALUES ('Programmation', 'Compétences en programmation logicielle'),
        ('Intelligence artificielle', 'Connaissance en IA et apprentissage automatique'),
        ('Cybersécurité', 'Compétences en sécurité informatique et protection des données'),
        ('Développement mobile', 'Développement dapplications pour smartphones'),
-       ('Cloud Computing', 'Gestion et déploiement de services cloud');*/
+       ('Cloud Computing', 'Gestion et déploiement de services cloud');
